@@ -27,6 +27,12 @@ public class CustomerDao {
                 .map(i -> new Customer(i, "Customer" + i));
     }
 
+    public Flux<Customer> getCustomer() {
+        return Flux.range(1, 10)
+                .doOnNext(i -> System.out.println("Processing count in stream flow : " + i))
+                .map(i -> new Customer(i, "Customer" + i));
+    }
+
     public static void delayTime(int i) {
         try {
             Thread.sleep(1000);
