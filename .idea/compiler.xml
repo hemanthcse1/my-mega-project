@@ -8,6 +8,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="first-spring-boot-demo" />
+        <module name="spring-data-reactive-mongo-db" />
         <module name="my-mega-project" />
         <module name="spring-reactive-programming" />
       </profile>
@@ -16,6 +17,7 @@
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="first-spring-boot-demo" options="-parameters" />
+      <module name="spring-data-reactive-mongo-db" options="-parameters" />
       <module name="spring-reactive-programming" options="-parameters" />
     </option>
   </component>

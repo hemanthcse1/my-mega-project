@@ -7,6 +7,7 @@
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/first-spring-boot-demo/pom.xml" />
         <option value="$PROJECT_DIR$/spring-reactive-programming/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-data-reactive-mongo-db/pom.xml" />
       </list>
     </option>
   </component>
