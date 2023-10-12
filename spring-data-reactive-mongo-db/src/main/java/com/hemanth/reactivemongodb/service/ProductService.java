@@ -36,6 +36,7 @@ public class ProductService {
     }
 
     public Mono<ProductDto> saveProduct(Mono<ProductDto> productDtoMono) {
+        System.out.println("service method called");
         return productDtoMono.map(ProductUtils::dtoToEntity)
                 .flatMap(productRepository::insert)
                 .map(ProductUtils::entityToDTO);
