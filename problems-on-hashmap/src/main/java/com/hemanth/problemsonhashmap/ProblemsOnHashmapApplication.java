@@ -67,6 +67,11 @@ public class ProblemsOnHashmapApplication {
         return new ArrayList<>(anagramMap.values());
     }
 
+    /*
+    * Subarray Sum Equals K:
+    * Problem: Given an array of integers, find the total number of subarrays whose sum equals k.
+    * */
+
 
 
 
