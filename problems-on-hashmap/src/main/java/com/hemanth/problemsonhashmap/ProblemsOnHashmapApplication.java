@@ -3,8 +3,7 @@ package com.hemanth.problemsonhashmap;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 @SpringBootApplication
 public class ProblemsOnHashmapApplication {
@@ -53,6 +52,21 @@ public class ProblemsOnHashmapApplication {
     /*3. Group Anagrams:
     * Problem: Given an array of strings, group anagrams together.
     * */
+
+    public static List<List<String>> groupAnagrams(String[] strs) {
+        Map<String, List<String>> anagramMap = new HashMap<>();
+        for (String str : strs) {
+            char[] chars = str.toCharArray();
+            Arrays.sort(chars);
+            String sortedStr = new String(chars);
+            if (!anagramMap.containsKey(sortedStr)) {
+                anagramMap.put(sortedStr, new ArrayList<>());
+            }
+            anagramMap.get(sortedStr).add(str);
+        }
+        return new ArrayList<>(anagramMap.values());
+    }
+
 
 
 
