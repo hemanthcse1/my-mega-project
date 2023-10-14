@@ -86,6 +86,27 @@ public class ProblemsOnHashmapApplication {
         return count;
     }
 
+    /*
+    * 5. Longest Subarray with Sum Divisible by K:
+    * Problem: Given an array of integers, find the length of the longest subarray with a sum that is divisible by k.
+    * */
+
+    public static int maxSubarraySum(int[] nums, int k) {
+        int maxLen = 0, sum = 0;
+        Map<Integer, Integer> sumMap = new HashMap<>();
+        sumMap.put(0, -1);
+        for (int i = 0; i < nums.length; i++) {
+            sum = (sum + nums[i]) % k;
+            if (sumMap.containsKey(sum)) {
+                maxLen = Math.max(maxLen, i - sumMap.get(sum));
+            } else {
+                sumMap.put(sum, i);
+            }
+        }
+        return maxLen;
+    }
+
+
 
 
 
