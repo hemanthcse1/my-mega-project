@@ -50,6 +50,10 @@ public class ProblemsOnHashmapApplication {
         return ' ';
     }
 
+    /*3. Group Anagrams:
+    * Problem: Given an array of strings, group anagrams together.
+    * */
+
 
 
 
