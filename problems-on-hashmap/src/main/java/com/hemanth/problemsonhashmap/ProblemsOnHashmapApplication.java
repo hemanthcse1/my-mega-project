@@ -19,7 +19,7 @@ public class ProblemsOnHashmapApplication {
      *   Problem: Given an array of integers, find two numbers such that they add up to a specific target.
      * */
 
-    public int[] twoSum(int[] nums, int target) {
+    public static int[] twoSum(int[] nums, int target) {
         Map<Integer, Integer> map = new HashMap<>();
         for (int i = 0; i < nums.length; i++) {
             int complement = target - nums[i];
@@ -31,6 +31,24 @@ public class ProblemsOnHashmapApplication {
         throw new IllegalArgumentException("No two sum solution");
     }
 
+
+    /*
+    * 2. Find the First Non-Repeating Character in a String:
+    * Problem: Find the first non-repeating character in a string.
+    * */
+
+    public static char firstUniqChar(String s) {
+        Map<Character, Integer> countMap = new HashMap<>();
+        for (char c : s.toCharArray()) {
+            countMap.put(c, countMap.getOrDefault(c, 0) + 1);
+        }
+        for (char c : s.toCharArray()) {
+            if (countMap.get(c) == 1) {
+                return c;
+            }
+        }
+        return ' ';
+    }
 
 
 
