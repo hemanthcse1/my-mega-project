@@ -7,12 +7,13 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="sorting-algorithms" />
+        <module name="tutorials-example-with-unit-test" />
         <module name="first-spring-boot-demo" />
         <module name="spring-data-reactive-mongo-db" />
         <module name="my-mega-project" />
         <module name="spring-reactive-programming" />
         <module name="problems-on-hashmap" />
-        <module name="tutorials-example-with-unit-test" />
       </profile>
     </annotationProcessing>
   </component>
@@ -20,6 +21,7 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="first-spring-boot-demo" options="-parameters" />
       <module name="problems-on-hashmap" options="-parameters" />
+      <module name="sorting-algorithms" options="-parameters" />
       <module name="spring-data-reactive-mongo-db" options="-parameters" />
       <module name="spring-reactive-programming" options="-parameters" />
       <module name="tutorials-example-with-unit-test" options="-parameters" />
