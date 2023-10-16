@@ -2,6 +2,7 @@
 <project version="4">
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$/first-spring-boot-demo/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/junit5-testing/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/problems-on-hashmap/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/sorting-algorithms/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/spring-data-reactive-mongo-db/src/main/java" charset="UTF-8" />

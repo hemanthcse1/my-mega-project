@@ -7,6 +7,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="junit5-testing" />
         <module name="sorting-algorithms" />
         <module name="tutorials-example-with-unit-test" />
         <module name="first-spring-boot-demo" />
@@ -20,6 +21,7 @@
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="first-spring-boot-demo" options="-parameters" />
+      <module name="junit5-testing" options="-parameters" />
       <module name="problems-on-hashmap" options="-parameters" />
       <module name="sorting-algorithms" options="-parameters" />
       <module name="spring-data-reactive-mongo-db" options="-parameters" />
