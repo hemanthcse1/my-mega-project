@@ -19,4 +19,19 @@ public class BookService {
     public List<Book> books() {
         return Collections.unmodifiableList(listOfBooks);
     }
+
+  /*  public Book getBookById(String id){
+        return listOfBooks.stream()
+                .filter(book -> book.getBookId().equals(id))
+                .findAny().get();
+    }*/
+
+    public Book getBookById(String id) {
+        for (Book book : listOfBooks) {
+            if (book.getBookId().equals(id)) {
+                return book;
+            }
+        }
+        return null;
+    }
 }

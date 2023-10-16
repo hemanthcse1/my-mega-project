@@ -29,9 +29,9 @@ public class AssertFalseDemo {
 
         Book headFirstJava = new Book("1", "Head First Java", "wrox");
 
-        // bookService.addBook(headFirstJava);
+        bookService.addBook(headFirstJava);
 
-        List<Book> listOfBooks = new ArrayList<>();
+        List<Book> listOfBooks = bookService.books();
 
         assertFalse(listOfBooks.isEmpty());
     }
@@ -42,7 +42,7 @@ public class AssertFalseDemo {
 
         Book headFirstJavaBook = new Book("1", "Head first Java", "wrox");
 
-        // bookService.addBook(headFirstJavaBook);
+        bookService.addBook(headFirstJavaBook);
 
         List<Book> listOfBooks = bookService.books();
 
@@ -55,7 +55,7 @@ public class AssertFalseDemo {
 
         Book headFirstJavaBook = new Book("1", "Head first Java", "wrox");
 
-        // bookService.addBook(headFirstJavaBook);
+        bookService.addBook(headFirstJavaBook);
 
         List<Book> listOfBooks = bookService.books();
 
@@ -68,7 +68,7 @@ public class AssertFalseDemo {
         BookService bookService = new BookService();
 
         Book headFirstJavaBook = new Book("1", "Head First Java ", "Wrox");
-        //  bookService.addBook(headFirstJavaBook);
+        bookService.addBook(headFirstJavaBook);
 
         List<Book> listOfBooks = bookService.books();
 
@@ -83,7 +83,7 @@ public class AssertFalseDemo {
 
         Book headFirstJavaBook = new Book("1", "Head first Java", "wrox");
 
-        // bookService.addBook(headFirstJavaBook);
+        bookService.addBook(headFirstJavaBook);
 
         List<Book> listOfBooks = bookService.books();
 
@@ -98,7 +98,7 @@ public class AssertFalseDemo {
 
         Book headFirstJavaBook = new Book("1", "Head first Java", "wrox");
 
-        // bookService.addBook(headFirstJavaBook);
+        bookService.addBook(headFirstJavaBook);
 
         List<Book> listOfBooks = bookService.books();
 
