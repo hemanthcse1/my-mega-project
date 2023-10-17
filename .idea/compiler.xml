@@ -12,6 +12,7 @@
         <module name="tutorials-example-with-unit-test" />
         <module name="first-spring-boot-demo" />
         <module name="spring-data-reactive-mongo-db" />
+        <module name="stack-data-structure" />
         <module name="my-mega-project" />
         <module name="spring-reactive-programming" />
         <module name="problems-on-hashmap" />
@@ -26,6 +27,7 @@
       <module name="sorting-algorithms" options="-parameters" />
       <module name="spring-data-reactive-mongo-db" options="-parameters" />
       <module name="spring-reactive-programming" options="-parameters" />
+      <module name="stack-data-structure" options="-parameters" />
       <module name="tutorials-example-with-unit-test" options="-parameters" />
     </option>
   </component>
