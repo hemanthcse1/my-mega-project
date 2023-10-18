@@ -4,9 +4,16 @@ import java.util.Arrays;
 
 public class BubbleSortImplementation {
 
+    /*
+     * Time complexity is O(n^2) -> quadratic
+     * */
+
     public static void main(String[] args) {
 
         int[] arr = {20, 35, -15, 7, 55, 1, -22};
+
+
+        // bubble largest number from left to right
 
         for (int lastUnsortedIndex = arr.length - 1; lastUnsortedIndex > 0; lastUnsortedIndex--) {
 
@@ -18,6 +25,23 @@ public class BubbleSortImplementation {
         }
 
         System.out.println(Arrays.toString(arr));
+
+
+        System.out.println("---------------------");
+
+
+        int[] arr2 = {34, 0, -12, 64, 12, 1, -44, 21, 3};
+
+        for (int lastUnSortedIndex = 0; lastUnSortedIndex < arr2.length - 1; lastUnSortedIndex++) {
+
+            for (int i = arr2.length - 1; i > 0; i--) {
+                if (arr2[i] < arr2[i - 1]) {
+                    swap(arr2, i, i - 1);
+                }
+            }
+        }
+
+        System.out.println(Arrays.toString(arr2));
 
     }
 
