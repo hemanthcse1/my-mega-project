@@ -8,6 +8,7 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.web.server.LocalServerPort;
+import org.springframework.stereotype.Repository;
 import org.springframework.test.context.jdbc.Sql;
 import org.springframework.web.client.RestTemplate;
 
@@ -66,8 +67,38 @@ public class ProductControllerTest {
 
         assertAll(
                 () -> assertNotNull(product),
-                () -> assertEquals(8,product.getId())
+                () -> assertEquals(8, product.getId()),
+                () -> assertEquals("Car", product.getName())
         );
+    }
+
+    @Test
+    @Sql(statements = "INSERT INTO product (id,name,price,qty) VALUES (9,'Bottle',2,1000)", executionPhase = Sql.ExecutionPhase.BEFORE_TEST_METHOD)
+    @Sql(statements = "DELETE FROM product WHERE name='Bottle'", executionPhase = Sql.ExecutionPhase.AFTER_TEST_METHOD)
+    public void updateProductTest() {
+        Product product = new Product(9, "Bottle", 2000, 2);
+
+        restTemplate.put(baseUrl + "/update/{id}", product, 9);
+
+        Product productFromDB = h2Repository.findById(9).get();
+
+        assertAll(
+                () -> assertNotNull(productFromDB),
+                () -> assertEquals(2000, productFromDB.getPrice())
+        );
+    }
+
+    @Test
+    @Sql(statements = "INSERT INTO product (id,name,qty,price) VALUES (12,'Mouse',2,4000)", executionPhase = Sql.ExecutionPhase.BEFORE_TEST_METHOD)
+    public void deleteProductTest() {
+
+        int recordCount = h2Repository.findAll().size();
+
+        assertEquals(6, recordCount);
+
+        restTemplate.delete(baseUrl+"/delete/{id}",12);
+
+        assertEquals(5,h2Repository.findAll().size());
     }
 
 }
