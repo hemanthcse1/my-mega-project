@@ -17,6 +17,7 @@
         <module name="my-mega-project" />
         <module name="spring-reactive-programming" />
         <module name="problems-on-hashmap" />
+        <module name="sorting-algorithms-in-java" />
       </profile>
     </annotationProcessing>
   </component>
@@ -27,6 +28,7 @@
       <module name="junit5-testing" options="-parameters" />
       <module name="problems-on-hashmap" options="-parameters" />
       <module name="sorting-algorithms" options="-parameters" />
+      <module name="sorting-algorithms-in-java" options="-parameters" />
       <module name="spring-data-reactive-mongo-db" options="-parameters" />
       <module name="spring-reactive-programming" options="-parameters" />
       <module name="stack-data-structure" options="-parameters" />
