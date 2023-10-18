@@ -18,6 +18,7 @@
         <module name="spring-reactive-programming" />
         <module name="problems-on-hashmap" />
         <module name="sorting-algorithms-in-java" />
+        <module name="problem-solving" />
       </profile>
     </annotationProcessing>
   </component>
@@ -26,6 +27,7 @@
       <module name="first-spring-boot-demo" options="-parameters" />
       <module name="integration-test-1" options="-parameters" />
       <module name="junit5-testing" options="-parameters" />
+      <module name="problem-solving" options="-parameters" />
       <module name="problems-on-hashmap" options="-parameters" />
       <module name="sorting-algorithms" options="-parameters" />
       <module name="sorting-algorithms-in-java" options="-parameters" />

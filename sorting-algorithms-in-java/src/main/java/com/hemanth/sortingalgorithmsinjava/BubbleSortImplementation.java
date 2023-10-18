@@ -13,7 +13,7 @@ public class BubbleSortImplementation {
         int[] arr = {20, 35, -15, 7, 55, 1, -22};
 
 
-        // bubble largest number from left to right
+        // bubble the largest number from left to right
 
         for (int lastUnsortedIndex = arr.length - 1; lastUnsortedIndex > 0; lastUnsortedIndex--) {
 
@@ -29,6 +29,7 @@ public class BubbleSortImplementation {
 
         System.out.println("---------------------");
 
+        // bubble the largest number from right to left
 
         int[] arr2 = {34, 0, -12, 64, 12, 1, -44, 21, 3};
 
@@ -44,6 +45,7 @@ public class BubbleSortImplementation {
         System.out.println(Arrays.toString(arr2));
 
     }
+
 
     public static void swap(int[] arr, int i, int j) {
         if (i == j) {
