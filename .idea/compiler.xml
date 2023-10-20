@@ -19,12 +19,10 @@
         <module name="my-mega-project" />
         <module name="problems-on-hashmap" />
         <module name="tree-data-structure" />
+        <module name="design-patterns-java" />
         <module name="sorting-algorithms-in-java" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="design-patterns-java" target="17" />
-    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
