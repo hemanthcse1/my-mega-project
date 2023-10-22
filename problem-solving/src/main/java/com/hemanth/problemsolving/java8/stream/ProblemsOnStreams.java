@@ -78,16 +78,41 @@ public class ProblemsOnStreams {
 
         System.out.println("filtered count -> " + filteredCount);
 
+
+
+
+
         System.out.println("----------------------------------------------\n\n");
         /*6. Write a program to find the average of a list of floating-point numbers using streams*/
 
         List<Double> floatNumbers = Arrays.asList(1.1, 1.2, 1.3, 1.4, 1.5);
 
-        OptionalDouble average = floatNumbers.stream()
+        double average = floatNumbers.stream()
                 .mapToDouble(Double::doubleValue)
-                .average();
+                .average()
+                .getAsDouble();
 
         System.out.println("average -> " + average);
+
+
+
+        System.out.println("----------------------------------------------\n\n");
+        /*7. Given a list of strings, write a program to concatenate all the strings using streams*/
+        String concatFruits = fruits.stream()
+                .collect(Collectors.joining(", "));
+
+        System.out.println("concat fruits -> "+concatFruits);
+
+
+
+        System.out.println("----------------------------------------------\n\n");
+        /*8. Write a program to remove duplicate elements from a list using streams.*/
+
+        List<Integer> dupNumbers = Arrays.asList(1,2,2,4,5,5,6,7,7,8,9,9);
+
+        dupNumbers.stream()
+                .distinct()
+                .forEach(System.out::println);
 
 
     }
