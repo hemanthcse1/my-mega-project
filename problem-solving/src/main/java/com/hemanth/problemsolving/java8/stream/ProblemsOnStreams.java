@@ -79,9 +79,6 @@ public class ProblemsOnStreams {
         System.out.println("filtered count -> " + filteredCount);
 
 
-
-
-
         System.out.println("----------------------------------------------\n\n");
         /*6. Write a program to find the average of a list of floating-point numbers using streams*/
 
@@ -95,24 +92,52 @@ public class ProblemsOnStreams {
         System.out.println("average -> " + average);
 
 
-
         System.out.println("----------------------------------------------\n\n");
         /*7. Given a list of strings, write a program to concatenate all the strings using streams*/
         String concatFruits = fruits.stream()
                 .collect(Collectors.joining(", "));
 
-        System.out.println("concat fruits -> "+concatFruits);
-
+        System.out.println("concat fruits -> " + concatFruits);
 
 
         System.out.println("----------------------------------------------\n\n");
         /*8. Write a program to remove duplicate elements from a list using streams.*/
 
-        List<Integer> dupNumbers = Arrays.asList(1,2,2,4,5,5,6,7,7,8,9,9);
+        List<Integer> dupNumbers = Arrays.asList(1, 2, 2, 4, 5, 5, 6, 7, 7, 8, 9, 9);
 
         dupNumbers.stream()
                 .distinct()
                 .forEach(System.out::println);
+
+
+        System.out.println("----------------------------------------------\n\n");
+        /*9. Give a list of Objects, write a program to sort the objects based on a specific attribute using streams. */
+        List<Personn> people = Arrays.asList(
+                new Personn("Hemanth", 31),
+                new Personn("Sharad", 35),
+                new Personn("Rahul", 34),
+                new Personn("Bob", 43),
+                new Personn("Charlie", 32)
+        );
+
+        Collections.sort(people, Comparator.comparing(Personn::getAge));
+
+        System.out.println(people);
+
+        people.stream()
+                .sorted(Comparator.comparing(Personn::getAge))
+                .forEach(System.out::println);
+
+
+        System.out.println("----------------------------------------------\n\n");
+        /*10. Write a program to check if all the elements in a list satisfy a given condition using streams.*/
+
+
+        List<Integer> numbers2 = Arrays.asList(2, 4, 6, 8, 10,11);
+        boolean isEven = numbers2.stream()
+                .anyMatch(n -> (n % 2) == 0);
+
+        System.out.println("is Even -> " + isEven);
 
 
     }
