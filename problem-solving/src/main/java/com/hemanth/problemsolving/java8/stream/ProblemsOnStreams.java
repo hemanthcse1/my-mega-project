@@ -4,6 +4,7 @@ import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
 import java.util.OptionalInt;
+import java.util.stream.Collectors;
 
 public class ProblemsOnStreams {
 
@@ -46,6 +47,26 @@ public class ProblemsOnStreams {
 
         System.out.println("Max element  -> " + maxValue);
 
+
+        System.out.println("----------------------------------------------\n\n");
+        /*Give a list fo strings, write a program to count the number of strings that start with a specific character using streams. */
+
+        List<String> fruits = Arrays.asList("cherry","banana","apple","orange","coconut","berry");
+
+        long fruitsCount = fruits.stream()
+                .filter(s -> s.startsWith("c"))
+                .count();
+
+        System.out.println("fruits count -> "+fruitsCount);
+
+
+        System.out.println("----------------------------------------------\n\n");
+        /*Convert a list of strings to uppercase using streams*/
+
+
+        fruits.stream()
+                .map(String::toUpperCase)
+                .forEach(System.out::println);
 
 
 
