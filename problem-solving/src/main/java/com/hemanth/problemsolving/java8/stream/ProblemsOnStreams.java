@@ -1,9 +1,6 @@
 package com.hemanth.problemsolving.java8.stream;
 
-import java.util.Arrays;
-import java.util.Comparator;
-import java.util.List;
-import java.util.OptionalInt;
+import java.util.*;
 import java.util.stream.Collectors;
 
 public class ProblemsOnStreams {
@@ -51,13 +48,13 @@ public class ProblemsOnStreams {
         System.out.println("----------------------------------------------\n\n");
         /*Give a list fo strings, write a program to count the number of strings that start with a specific character using streams. */
 
-        List<String> fruits = Arrays.asList("cherry","banana","apple","orange","coconut","berry");
+        List<String> fruits = Arrays.asList("cherry", "banana", "apple", "orange", "coconut", "berry");
 
         long fruitsCount = fruits.stream()
                 .filter(s -> s.startsWith("c"))
                 .count();
 
-        System.out.println("fruits count -> "+fruitsCount);
+        System.out.println("fruits count -> " + fruitsCount);
 
 
         System.out.println("----------------------------------------------\n\n");
@@ -69,6 +66,28 @@ public class ProblemsOnStreams {
                 .forEach(System.out::println);
 
 
+        System.out.println("----------------------------------------------\n\n");
+        /*5. Given a list of integers, write a program to filter out the even numbers using streams.
+         Count the number of elements in a list that satisfy a specific condition using streams*/
+
+        List<Integer> numbers = Arrays.asList(1, 2, 4, 5, 6, 7, 8, 9);
+
+        long filteredCount = numbers.stream()
+                .filter(n -> n % 2 == 0)
+                .count();
+
+        System.out.println("filtered count -> " + filteredCount);
+
+        System.out.println("----------------------------------------------\n\n");
+        /*6. Write a program to find the average of a list of floating-point numbers using streams*/
+
+        List<Double> floatNumbers = Arrays.asList(1.1, 1.2, 1.3, 1.4, 1.5);
+
+        OptionalDouble average = floatNumbers.stream()
+                .mapToDouble(Double::doubleValue)
+                .average();
+
+        System.out.println("average -> " + average);
 
 
     }
