@@ -19,8 +19,8 @@ public class ComparatorMain {
        /* fruits.sort(Comparator.comparingInt(String::length));
         System.out.println(fruits);*/
 
-        Collections.sort(fruits, Comparator.comparingInt(String::length));
-        System.out.println(fruits);
+       // Collections.sort(fruits, Comparator.comparingInt(String::length));
+       // System.out.println(fruits);
 
 
         System.out.println("\n\n--------------------------------------\n");
@@ -55,5 +55,24 @@ public class ComparatorMain {
 
 
 
+        System.out.println("\n\n--------------------------------------\n");
+        /*5. Sort the list of Strings based on the index of the first occurrence of "e" in each string and print the result.*/
+
+        fruits.sort(Comparator.comparingInt(s->s.indexOf("e")));
+        System.out.println(fruits);
+
+
+
+        System.out.println("\n\n--------------------------------------\n");
+        /*6. Sort a list of strings ignoring case sensitivity using a case-insensitive comparator. */
+
+        List<String> fruitsMix = Arrays.asList("APPLE", "cherry", "banana", "pineapple", "KiWI", "orange", "graphs");
+
+        Comparator<String> caseInsensitiveOrder = String.CASE_INSENSITIVE_ORDER;
+        fruitsMix.sort(caseInsensitiveOrder);
+
+      /*  Collections.sort(fruitsMix);*/
+
+        System.out.println(fruitsMix);
     }
 }
