@@ -31,6 +31,29 @@ public class ComparatorMain {
 
         System.out.println("Numbs in reverse order -> " + nums);
 
+        System.out.println("\n\n--------------------------------------\n");
+        /*3. Sor the list of employees based on their age in ascending order and print the result*/
+
+        List<CompEmployee> employees = Arrays.asList(
+                new CompEmployee(1,"Hemanth",31,30000),
+                new CompEmployee(2,"Rahul",34,40000),
+                new CompEmployee(3,"Sharad",35,230000),
+                new CompEmployee(4,"Ashwin",30,40000),
+                new CompEmployee(5,"Kanika",26,80000),
+                new CompEmployee(5,"Sharma",26,70000)
+        );
+
+       // employees.sort(Comparator.comparingInt(CompEmployee::getAge));
+       // System.out.println(employees);
+
+
+        System.out.println("\n\n--------------------------------------\n");
+        /*4. Sort the list of employees based on their age in ascending order. IF the ages are the same, compare by salary, print the result*/
+
+        employees.sort(Comparator.comparingInt(CompEmployee::getAge).thenComparing(CompEmployee::getSalary));
+        System.out.println(employees);
+
+
 
     }
 }
