@@ -1,6 +1,7 @@
 package com.hemanth.problemsolving.java8.comparator;
 
 import javax.print.DocFlavor;
+import java.time.LocalDate;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.Comparator;
@@ -74,5 +75,20 @@ public class ComparatorMain {
       /*  Collections.sort(fruitsMix);*/
 
         System.out.println(fruitsMix);
+
+
+        System.out.println("\n\n--------------------------------------\n");
+        /*7. Sort a list of dates in ascending order using the comparing() method with a lambda expression. */
+        List<LocalDate> dates = Arrays.asList(
+                LocalDate.of(2023,5,10),
+                LocalDate.of(2023,3,15),
+                LocalDate.of(2023,7,1)
+        );
+
+        dates.sort(Comparator.comparing(date -> {
+            return date;
+        }));
+
+        System.out.println(dates);
     }
 }
