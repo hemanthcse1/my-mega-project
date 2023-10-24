@@ -1,5 +1,7 @@
 package com.hemanth.queuedatastructure.usinglinkedlist;
 
+import java.util.NoSuchElementException;
+
 public class MyQueue {
 
 
@@ -68,6 +70,22 @@ public class MyQueue {
         return result;
     }
 
+    public int first() {
+        if (isEmpty()) {
+            throw new NoSuchElementException("Queue is empty");
+        }
+
+        return front.data;
+    }
+
+    public int last() {
+        if (isEmpty()) {
+            throw new NoSuchElementException("Queue is empty");
+        }
+
+        return rear.data;
+    }
+
     public static void main(String[] args) {
 
         MyQueue queue = new MyQueue();
@@ -82,7 +100,7 @@ public class MyQueue {
 
         System.out.println("length -> " + queue.getLength());
         queue.print();
-
+/*
         queue.dequeue();
         queue.dequeue();
 
@@ -91,7 +109,10 @@ public class MyQueue {
 
         queue.dequeue();
         queue.dequeue();
-        queue.dequeue();
+        queue.dequeue();*/
+
+        System.out.println("first element in queue -> " + queue.first());
+        System.out.println("last element in queue -> " + queue.last());
 
     }
 }
