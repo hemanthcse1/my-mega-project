@@ -54,6 +54,20 @@ public class MyQueue {
         System.out.println("null");
     }
 
+    public int dequeue() {
+        if (isEmpty()) {
+            throw new RuntimeException("Queue is empty");
+        }
+
+        int result = front.data;
+        front = front.next;
+        if (front == null) {
+            rear = null;
+        }
+        length--;
+        return result;
+    }
+
     public static void main(String[] args) {
 
         MyQueue queue = new MyQueue();
@@ -65,6 +79,12 @@ public class MyQueue {
         queue.enqueue(15);
         queue.enqueue(20);
         queue.enqueue(25);
+
+        System.out.println("length -> " + queue.getLength());
+        queue.print();
+
+        queue.dequeue();
+        queue.dequeue();
 
         System.out.println("length -> " + queue.getLength());
         queue.print();
