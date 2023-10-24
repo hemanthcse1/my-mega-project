@@ -89,5 +89,9 @@ public class MyQueue {
         System.out.println("length -> " + queue.getLength());
         queue.print();
 
+        queue.dequeue();
+        queue.dequeue();
+        queue.dequeue();
+
     }
 }
