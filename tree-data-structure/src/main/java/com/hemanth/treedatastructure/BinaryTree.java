@@ -105,7 +105,7 @@ public class BinaryTree {
     public List<Integer> inOrderUsingIteration(TreeNode root) {
         List<Integer> inOrderTraversal = new ArrayList<>();
         if (root == null) {
-            return inOrderTraversal;
+            return null;
         }
 
         Stack<TreeNode> stack = new Stack<>();
