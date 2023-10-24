@@ -21,6 +21,7 @@
         <module name="tree-data-structure" />
         <module name="design-patterns-java" />
         <module name="sorting-algorithms-in-java" />
+        <module name="queue-data-structure" />
       </profile>
     </annotationProcessing>
   </component>
@@ -32,6 +33,7 @@
       <module name="junit5-testing" options="-parameters" />
       <module name="problem-solving" options="-parameters" />
       <module name="problems-on-hashmap" options="-parameters" />
+      <module name="queue-data-structure" options="-parameters" />
       <module name="sorting-algorithms" options="-parameters" />
       <module name="sorting-algorithms-in-java" options="-parameters" />
       <module name="spring-data-reactive-mongo-db" options="-parameters" />
