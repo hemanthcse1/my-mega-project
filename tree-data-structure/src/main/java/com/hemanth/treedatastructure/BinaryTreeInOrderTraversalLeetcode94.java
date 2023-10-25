@@ -65,6 +65,10 @@ public class BinaryTreeInOrderTraversalLeetcode94 {
             }
         }
 
+        String path = String.valueOf(temp.data);
+
+        path.add(temp.data);
+
         return inOrderTraversal;
 
     }
