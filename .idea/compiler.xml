@@ -12,6 +12,7 @@
         <module name="stack-data-structure" />
         <module name="spring-reactive-programming" />
         <module name="problem-solving" />
+        <module name="graphs-ds" />
         <module name="integration-test-1" />
         <module name="junit5-testing" />
         <module name="first-spring-boot-demo" />
@@ -29,6 +30,7 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="design-patterns-java" options="-parameters" />
       <module name="first-spring-boot-demo" options="-parameters" />
+      <module name="graphs-ds" options="-parameters" />
       <module name="integration-test-1" options="-parameters" />
       <module name="junit5-testing" options="-parameters" />
       <module name="problem-solving" options="-parameters" />
