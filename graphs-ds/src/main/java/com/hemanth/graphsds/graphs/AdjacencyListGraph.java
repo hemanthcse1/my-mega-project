@@ -1,6 +1,7 @@
 package com.hemanth.graphsds.graphs;
 
 import java.util.LinkedList;
+import java.util.Queue;
 
 public class AdjacencyListGraph {
 
@@ -43,14 +44,35 @@ public class AdjacencyListGraph {
     }
 
 
+    public void bfs(int s){
+        boolean[] isVisited = new boolean[V];
+        Queue<Integer> q = new LinkedList<>();
+        q.offer(s);
+        isVisited[s] = true;
+        while (!q.isEmpty()){
+            int u = q.poll();
+            System.out.print(u+" -> ");
+            for (int v: adj[u]){
+                if (!isVisited[v]){
+                    isVisited[v] = true;
+                    q.offer(v);
+                }
+            }
+        }
+    }
+
+
     public static void main(String[] args) {
-        AdjacencyListGraph graph = new AdjacencyListGraph(4);
+        AdjacencyListGraph graph = new AdjacencyListGraph(5);
         graph.addEdge(0, 1);
         graph.addEdge(1, 2);
         graph.addEdge(2, 3);
         graph.addEdge(3, 0);
+        graph.addEdge(2,4);
 
         System.out.println(graph);
+
+        graph.bfs(0);
     }
 
 
