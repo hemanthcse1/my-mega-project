@@ -13,7 +13,7 @@ public class Graph {
         this.adjMatrix = new int[nodes][nodes];
     }
 
-    public void addNodes(int u, int v) {
+    public void addEdges(int u, int v) {
         this.adjMatrix[u][v] = 1;
         this.adjMatrix[v][u] = 1;
         this.E++;
@@ -37,10 +37,10 @@ public class Graph {
 
 
         Graph graph = new Graph(4);
-        graph.addNodes(0, 1);
-        graph.addNodes(1, 2);
-        graph.addNodes(2, 3);
-        graph.addNodes(3, 0);
+        graph.addEdges(0, 1);
+        graph.addEdges(1, 2);
+        graph.addEdges(2, 3);
+        graph.addEdges(3, 0);
 
         System.out.println(graph);
 
