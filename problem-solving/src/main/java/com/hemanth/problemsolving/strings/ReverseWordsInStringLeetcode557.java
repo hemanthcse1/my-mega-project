@@ -16,11 +16,11 @@ public class ReverseWordsInStringLeetcode557 {
 
         String[] wordsArray = s.split(" ");
 
-        for (int i = 0; i< wordsArray.length; i++){
-            result.append(reverseWord(wordsArray[i])).append(" ");
+        for (String word: wordsArray){
+            result.append(reverseWord(word)).append(" ");
         }
 
-        return new String(result);
+        return result.toString().trim();
     }
 
     public static String reverseWord(String s){
