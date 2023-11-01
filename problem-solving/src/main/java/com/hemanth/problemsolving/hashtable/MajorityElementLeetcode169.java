@@ -8,8 +8,8 @@ public class MajorityElementLeetcode169 {
     public static void main(String[] args) {
 
 
-         int[] arr = {2, 2, 1, 1, 1, 2, 2};
-        //int[] arr = {3, 2, 3};
+        int[] arr = {2, 2, 1, 1, 1, 2, 2, 3, 4, 4, 4, 4, 4, 4, 4};
+        // int[] arr = {3, 2, 3};
 
         System.out.println(majorityElement(arr));
 
@@ -17,6 +17,10 @@ public class MajorityElementLeetcode169 {
 
 
     public static int majorityElement(int[] nums) {
+
+
+        System.out.println(result);
+
         if (nums.length == 0) {
             return 0;
         }
@@ -33,13 +37,12 @@ public class MajorityElementLeetcode169 {
             }
         }
 
-        int count = 0;
+
         int majElement = 0;
         for (Map.Entry<Integer, Integer> mapNums : majorityElement.entrySet()) {
 
             System.out.println("key -> " + mapNums.getKey() + "      " + "value -> " + mapNums.getValue());
-            if (mapNums.getValue() > count) {
-                count = mapNums.getValue();
+            if (mapNums.getValue() >= nums.length / 2) {
                 majElement = mapNums.getKey();
             }
         }
