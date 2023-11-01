@@ -19,8 +19,6 @@ public class MajorityElementLeetcode169 {
     public static int majorityElement(int[] nums) {
 
 
-        System.out.println(result);
-
         if (nums.length == 0) {
             return 0;
         }
