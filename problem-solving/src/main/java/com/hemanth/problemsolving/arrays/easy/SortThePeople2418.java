@@ -9,33 +9,30 @@ public class SortThePeople2418 {
     public static void main(String[] args) {
 
 
-        int[] heights = {180,165,170};
-        String[] names = {"Mary","john","Emma"};
+        int[] heights = {180, 165, 170};
+        String[] names = {"Mary", "John", "Emma"};
 
         System.out.println(Arrays.toString(sortPeople(names, heights)));
 
     }
 
-    public static String[] sortPeople(String[] names, int[] heights){
+    public static String[] sortPeople(String[] names, int[] heights) {
+
 
         int n = names.length;
-        String[] output = new String[n];
 
-        Arrays.sort(heights);
-
-        for (int i = 0; i < n / 2; i++) {
-            int temp = heights[i];
-            heights[i] = heights[n - i - 1];
-            heights[n - i - 1] = temp;
+        Integer[] indices = new Integer[n];
+        for (int i = 0; i < n; i++) {
+            indices[i] = i;
         }
 
+        Arrays.sort(indices,Comparator.comparingInt(i -> heights[i]));
 
-        for (int i = 0; i< n; i++){
-            System.out.println(heights[i]);
+        String[] sortedNames = new String[n];
+        for (int i = 0; i < n; i++) {
+            sortedNames[i] = names[indices[i]];
         }
 
-
-        return output;
-
+        return sortedNames;
     }
 }
