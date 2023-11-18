@@ -1,8 +1,8 @@
 package com.hemanth.problemsolving.arrays.easy;
 
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.Comparator;
+import org.apache.logging.log4j.util.PropertySource;
+
+import java.util.*;
 
 public class SortThePeople2418 {
 
@@ -19,20 +19,40 @@ public class SortThePeople2418 {
     public static String[] sortPeople(String[] names, int[] heights) {
 
 
-        int n = names.length;
+        Map<Integer,Integer> peopleHeight = new HashMap<>();
 
-        Integer[] indices = new Integer[n];
-        for (int i = 0; i < n; i++) {
-            indices[i] = i;
+        for (int i = 0; i<heights.length; i++){
+            peopleHeight.put(heights[i],i);
         }
 
-        Arrays.sort(indices,Comparator.comparingInt(i -> heights[i]));
+        Arrays.sort(heights);
+        reverseArray(heights);
+
+        System.out.println(Arrays.toString(heights));
+
+
+        int n = names.length;
 
         String[] sortedNames = new String[n];
         for (int i = 0; i < n; i++) {
-            sortedNames[i] = names[indices[i]];
+
+            sortedNames[i] = names[peopleHeight.get(heights[i])];
+
+
         }
 
         return sortedNames;
+    }
+
+    private static void reverseArray(int[] array) {
+        int left = 0;
+        int right = array.length - 1;
+        while (left < right) {
+            int temp = array[left];
+            array[left] = array[right];
+            array[right] = temp;
+            left++;
+            right--;
+        }
     }
 }
