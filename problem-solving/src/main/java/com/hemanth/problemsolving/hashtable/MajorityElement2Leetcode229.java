@@ -19,6 +19,30 @@ public class MajorityElement2Leetcode229 {
     }
 
 
+/*    public static List<Integer> majorityElement2(int[] nums) {
+        List<Integer> result = new ArrayList<>();
+
+        Map<Integer, Integer> elements = new HashMap<>();
+
+        for (int number : nums) {
+            if (elements.containsKey(number)) {
+                int elementCount = elements.get(number) + 1;
+                elements.put(number, elementCount);
+            } else {
+                elements.put(number, 1);
+            }
+        }
+
+        for (Map.Entry<Integer, Integer> numbers : elements.entrySet()) {
+
+            if (numbers.getValue() > nums.length / 3) {
+                result.add(numbers.getKey());
+            }
+        }
+
+        return result;
+    }*/
+
     public static List<Integer> majorityElement2(int[] nums) {
         List<Integer> result = new ArrayList<>();
 
