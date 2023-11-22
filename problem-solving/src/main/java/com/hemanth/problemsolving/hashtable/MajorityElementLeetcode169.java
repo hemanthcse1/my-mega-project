@@ -16,6 +16,40 @@ public class MajorityElementLeetcode169 {
     }
 
 
+  /*  public static int majorityElement(int[] nums) {
+
+
+        if (nums.length == 0) {
+            return 0;
+        }
+
+        Map<Integer, Integer> majorityElement = new HashMap<>();
+
+        for (int num : nums) {
+            if (majorityElement.containsKey(num)) {
+                int elementCount = majorityElement.get(num) + 1;
+                majorityElement.put(num, elementCount);
+
+            } else {
+                majorityElement.put(num, 1);
+            }
+        }
+
+
+        int majElement = 0;
+        for (Map.Entry<Integer, Integer> mapNums : majorityElement.entrySet()) {
+
+            System.out.println("key -> " + mapNums.getKey() + "      " + "value -> " + mapNums.getValue());
+            if (mapNums.getValue() >= nums.length / 2) {
+                majElement = mapNums.getKey();
+            }
+        }
+
+
+        return majElement;
+    }*/
+
+
     public static int majorityElement(int[] nums) {
 
 
