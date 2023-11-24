@@ -21,6 +21,32 @@ public class ProductController {
     }
 
 
+   /* @PostMapping
+    public ResponseEntity<Product> saveProduct(@Validated @RequestBody Product product){
+        return ResponseEntity.ok(productService.saveProduct(product));
+    }
+
+    @GetMapping("/{id}")
+    public ResponseEntity<Product> getProductById(@PathVariable("id") Integer id){
+        return ResponseEntity.ok(productService.getProduct(id));
+    }
+
+    @GetMapping
+    public ResponseEntity<List<Product>> getAllProducts(){
+        return ResponseEntity.ok(productService.findAll());
+    }
+
+    @PutMapping("/update/{id}")
+    public ResponseEntity<Product> updateProduct(@Validated @RequestBody Product product, @PathVariable("id") Integer id){
+        return ResponseEntity.ok(productService.updateProduct(product,id));
+    }
+
+    @DeleteMapping("/delete/{id}")
+    @ResponseStatus(HttpStatus.OK)
+    public void deleteProduct(@PathVariable("id") Integer id){
+        productService.deleteProduct(id);
+    }*/
+
     @PostMapping
     public ResponseEntity<Product> saveProduct(@Validated @RequestBody Product product){
         return ResponseEntity.ok(productService.saveProduct(product));
