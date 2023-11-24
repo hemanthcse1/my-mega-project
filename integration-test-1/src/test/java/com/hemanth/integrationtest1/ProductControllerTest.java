@@ -107,6 +107,37 @@ public class ProductControllerTest {
         );
     }
 
+
+/*    @Test
+    @Sql(statements = "INSERT INTO product (id, name,price,qty) VALUES (8,'Car',2,20000)", executionPhase = Sql.ExecutionPhase.BEFORE_TEST_METHOD)
+    @Sql(statements = "DELETE FROM product WHERE name='Car'", executionPhase = Sql.ExecutionPhase.AFTER_TEST_METHOD)
+    public void findProductByIdTest() {
+
+        Product product = restTemplate.getForObject(baseUrl + "/{id}", Product.class, 8);
+
+        assertAll(
+                () -> assertNotNull(product),
+                () -> assertEquals(8, product.getId()),
+                () -> assertEquals("Car", product.getName())
+        );
+    }
+
+    @Test
+    @Sql(statements = "INSERT INTO product (id,name,price,qty) VALUES (9,'Bottle',2,1000)", executionPhase = Sql.ExecutionPhase.BEFORE_TEST_METHOD)
+    @Sql(statements = "DELETE FROM product WHERE name='Bottle'", executionPhase = Sql.ExecutionPhase.AFTER_TEST_METHOD)
+    public void updateProductTest() {
+        Product product = new Product(9, "Bottle", 2000, 2);
+
+        restTemplate.put(baseUrl + "/update/{id}", product, 9);
+
+        Product productFromDB = h2Repository.findById(9).get();
+
+        assertAll(
+                () -> assertNotNull(productFromDB),
+                () -> assertEquals(2000, productFromDB.getPrice())
+        );
+    }*/
+
     @Test
     @Sql(statements = "INSERT INTO product (id,name,qty,price) VALUES (12,'Mouse',2,4000)", executionPhase = Sql.ExecutionPhase.BEFORE_TEST_METHOD)
     public void deleteProductTest() {
