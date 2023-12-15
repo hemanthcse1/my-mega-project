@@ -9,6 +9,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="sorting-algorithms" />
         <module name="tutorials-example-with-unit-test" />
+        <module name="interview-practice" />
         <module name="stack-data-structure" />
         <module name="spring-reactive-programming" />
         <module name="problem-solving" />
@@ -32,6 +33,7 @@
       <module name="first-spring-boot-demo" options="-parameters" />
       <module name="graphs-ds" options="-parameters" />
       <module name="integration-test-1" options="-parameters" />
+      <module name="interview-practice" options="-parameters" />
       <module name="junit5-testing" options="-parameters" />
       <module name="problem-solving" options="-parameters" />
       <module name="problems-on-hashmap" options="-parameters" />
